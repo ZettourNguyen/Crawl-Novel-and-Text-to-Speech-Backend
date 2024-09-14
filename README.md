@@ -26,7 +26,6 @@ This project is designed to provide two key functionalities: web scraping of nov
 ## Use Cases
 
 - For users who prefer listening to novels rather than reading.
-- Accessibility purposes, making text content available to visually impaired individuals.
 - Automating the process of converting long text content into audio files.
 
 ## Installation
