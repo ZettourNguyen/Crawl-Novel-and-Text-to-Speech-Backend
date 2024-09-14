@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logger Client</title>
+</head>
+<body>
+  <h1>Client WebSocket Logger</h1>
+  <div id="log"></div>
+  <script>
+    // Kết nối tới WebSocket server
+    const socket = new WebSocket('ws://localhost:8080');
+    // Khi WebSocket mở kết nối
+    socket.onopen = () => {
+      console.log('Connected to WebSocket server');
+    };
+    // Khi nhận được log từ server
+    socket.onmessage = (event) => {
+      const log = JSON.parse(event.data);
+      const logContainer = document.getElementById('log');
+      logContainer.innerHTML += `<p>${log.message || log.level}: ${log.message}</p>`;
+    };
+    // Khi kết nối WebSocket bị đóng
+    socket.onclose = () => {
+      console.log('Disconnected from WebSocket server');
+    };
+  </script>
+</body>
+</html>
