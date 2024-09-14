@@ -7,8 +7,8 @@ This project is designed to provide two key functionalities: web scraping of nov
 ### Crawl Novel & Text-to-Speech:
 
 - Crawl novel content from selected websites.
-- Convert crawled text to audio files in formats such as MP3 or WAV.
-- Allows user selection for specific chapters to crawl and convert.
+- Convert crawled text to audio files in formats MP3 
+- Allows user selection for specific website to crawl and convert.
 - Utilizes modern TTS services to provide natural-sounding voices.
 - Supports multiple languages (English and Vietnamese) and various voice options.
 
@@ -16,7 +16,6 @@ This project is designed to provide two key functionalities: web scraping of nov
 
 - Directly convert any input text to audio using AWS or Azure TTS services.
 - Customize the voice (male, female, etc.) and language (English, Vietnamese).
-- High-quality output in MP3, WAV, and other formats.
 
 ## Supported TTS Services
 
