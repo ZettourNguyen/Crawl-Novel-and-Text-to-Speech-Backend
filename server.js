@@ -39,7 +39,7 @@ const clients = new Map();
 
 
 // Route SSE để gửi log tới client
-app.get('/events/:clientId', (req, res) => {
+app.get('/api/events/:clientId', (req, res) => {
   const clientId = req.params.clientId;
   res.setHeader('Content-Type', 'text/event-stream');
   res.setHeader('Cache-Control', 'no-cache');
@@ -106,7 +106,7 @@ export async function sendZip(clientId, filePath) {
 }
 
 
-app.post('/stop/:clientId', async (req, res) => {
+app.post('/api/stop/:clientId', async (req, res) => {
   const clientId = req.params.clientId; // Không cần optional chaining vì clientId luôn có
   stopCrawling(clientId); // Gọi hàm stopCrawling
   res.status(200).send({ message: `Crawl process for client ${clientId} is stopping.` });
@@ -114,7 +114,7 @@ app.post('/stop/:clientId', async (req, res) => {
 
 
 // Route nhận URL
-app.post('/texttospeech', async (req, res) => {
+app.post('/api/texttospeech', async (req, res) => {
   const { service, language, voice, text, clientId } = req.body;
   
   const logMessage = `
@@ -144,7 +144,7 @@ app.post('/texttospeech', async (req, res) => {
 });
 
 
-app.post('/url', (req, res) => {
+app.post('/api/url', (req, res) => {
 
   const url = req.body?.url;
   const clientId = req.body?.clientId;

@@ -4,6 +4,9 @@
   "description": "",
   "author": "ZettourNguyen",
   "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "@aws-sdk/client-polly": "^3.650.0",
     "archiver": "^7.0.1",

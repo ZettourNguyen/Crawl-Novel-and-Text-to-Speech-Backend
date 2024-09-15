@@ -1,0 +1,28 @@
+services:
+  
+  crawl-tts-frontend:
+    build:
+      context: ./path/to/frontend
+      dockerfile: Dockerfile
+    container_name: crawl-tts-frontend
+    ports:
+      - "4000:4000"
+  crawl-tts-backend:
+    build: 
+      context: ./path/to/backend
+      dockerfile: Dockerfile
+    container_name: crawl-tts-backend
+    ports:
+      - "3000:3000"
+
+  crawl-tts-nginx:
+    image: nginx:latest
+    container_name: crawl-tts-nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/proxy.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - crawl-tts-frontend
+      - crawl-tts-backend
+

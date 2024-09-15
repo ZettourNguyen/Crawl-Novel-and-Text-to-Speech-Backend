@@ -1,0 +1,8 @@
+services:
+  crawl-tts-backend:
+    build: 
+      context: ./test
+      dockerfile: Dockerfile
+    container_name: crawl-tts-backend
+    ports:
+      - "3000:3000"
