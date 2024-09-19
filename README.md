@@ -43,10 +43,10 @@ I recommend this way because it will give you the results on your machine instea
 
 1. On your terminal, type these commands:
     ```sh
-    git clone https://github.com/ZettourNguyen/Crawl-Novel-and-Text-to-Speech-Frontend.git
+    git clone https://github.com/ZettourNguyen/Crawl-Novel-and-Text-to-Speech-Backend.git
     ```
     ```sh
-    cd Crawl-Novel-and-Text-to-Speech-Frontend
+    cd Crawl-Novel-and-Text-to-Speech-Backend
     ```
 
 2. Install dependencies:
