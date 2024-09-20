@@ -32,12 +32,6 @@ This project is designed to provide two key functionalities: web scraping of nov
 docker compose up --build
 ```
 
-#### While the Docker Image was running, uuse the Web UI via this URL:
-
-```sh
-http://localhost:3000/
-```
-
 ### With the normal way (highly recommend):
 I recommend this way because it will give you the results on your machine instead of downloading them on the client. For text-to-speech, retrieving the results from the server will always be accurate.
 
@@ -56,16 +50,11 @@ I recommend this way because it will give you the results on your machine instea
     yarn install
     ```
 
-3. Run client:
+3. Run server:
     ```sh
-    npm run dev
+    npm run start
     # or
-    yarn dev
-    ```
-
-4. Use the Web UI via this URL:
-    ```sh
-    http://localhost:3000/
+    yarn start
     ```
 
 If you haven't set up the frontend yet, please visit [Crawl-Novel-and-Text-to-Speech-Frontend](https://github.com/ZettourNguyen/Crawl-Novel-and-Text-to-Speech-Frontend) for the setup instructions.
